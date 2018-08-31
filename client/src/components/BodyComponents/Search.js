@@ -4,6 +4,7 @@ import { Button } from 'reactstrap';
 const buttonStyles = {
   backgroundColor: '#2BC1C5',
   height: '29px',
+  paddingTop: '2px',
 };
 
 export default class Search extends Component {

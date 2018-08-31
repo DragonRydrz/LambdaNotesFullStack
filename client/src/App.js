@@ -39,11 +39,12 @@ class App extends Component {
               style={{
                 maxWidth: '250px',
                 backgroundColor: '#D8D8D8',
+                paddingTop: '10px',
               }}
             >
               <NavPannel xs="3" />
             </Col>
-            <Col style={{ backgroundColor: '#F4F4F4' }}>
+            <Col style={{ backgroundColor: '#F4F4F4', paddingTop: '10px' }}>
               <div className={this.props.loggedIn ? null : 'd-none'}>
                 <Body />
               </div>
@@ -202,5 +203,8 @@ const mapStateToProps = state => {
 };
 
 export default withRouter(
-  connect(mapStateToProps, { createUser, login, authorize })(App)
+  connect(
+    mapStateToProps,
+    { createUser, login, authorize }
+  )(App)
 );

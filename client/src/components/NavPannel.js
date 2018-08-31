@@ -62,4 +62,9 @@ const mapStateToProps = state => {
   };
 };
 
-export default withRouter(connect(mapStateToProps, { signOut })(NavPannel));
+export default withRouter(
+  connect(
+    mapStateToProps,
+    { signOut }
+  )(NavPannel)
+);

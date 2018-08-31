@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { CSVLink } from 'react-csv';
 import Search from '../BodyComponents/Search';
 import NoteCard from './NoteCard';
+import { CardColumns } from 'reactstrap';
 
 class NotesList extends Component {
   state = {
@@ -26,9 +27,8 @@ class NotesList extends Component {
           </CSVLink>
         </div>
         <h3 className="mt-5 ml-3">Your Notes:</h3>
-        <div className="d-flex flex-wrap justify-content-around">
+        <div className="d-flex flex-wrap card-container">
           {/* <CardColumns> */}
-          {console.log(this.state.filteredNotes, 'filteredNotes')}
           {this.state.filteredNotes.map(note => (
             <NoteCard key={note._id} note={note} />
           ))}
