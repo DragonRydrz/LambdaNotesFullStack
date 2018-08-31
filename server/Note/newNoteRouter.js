@@ -17,10 +17,10 @@ router.post('/', restricted, (req, res) => {
       .save()
       .then(note => {
         const note_id = note._id;
-        console.log(note_id, 'note');
-        console.log(note_id);
+        // console.log(note_id, 'note');
+        // console.log(note_id);
         notes.push(note_id);
-        console.log(notes, 'added');
+        // console.log(notes, 'added');
         // res.json(note);
         return notes;
       })

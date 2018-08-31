@@ -34,7 +34,7 @@ const localStrategy = new LocalStrategy(function(username, password, done) {
     if (!user) {
       return done(null, false);
     }
-    console.log(user.checkPassword);
+    // console.log(user.checkPassword);
     user.checkPassword(password, (err, valid) => {
       if (err) {
         return done(err);

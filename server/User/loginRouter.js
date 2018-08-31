@@ -17,7 +17,7 @@ router.post('/', authenticate, (req, res) => {
 });
 
 router.get('/', restricted, (req, res) => {
-  console.log(req.user);
+  // console.log(req.user);
   // const { _id } = req.user;
   const { _id, username, notes } = req.user;
   const tknUser = { _id, username };
@@ -32,7 +32,6 @@ router.get('/', restricted, (req, res) => {
 });
 
 router.get('/:username', (req, res) => {
-  console.log('in other get');
   const { username } = req.params;
   User.findOne({ username })
     .select('security')
