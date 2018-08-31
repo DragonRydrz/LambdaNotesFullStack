@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha *.tests.js",
     "start": "nodemon server/server.js",
-    "heroku-postbuild": "cd client && yarn --production=false && yarn run build"
+    "heroku-postbuild": "cd client && yarn && yarn --production=false && yarn run build"
   },
   "keywords": [],
   "author": "",
