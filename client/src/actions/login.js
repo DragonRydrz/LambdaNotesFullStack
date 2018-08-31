@@ -4,7 +4,7 @@ export const LOGIN = 'LOGIN';
 export const ERROR = 'ERROR';
 export const login = data => dispatch => {
   const host = '/api/login';
-  console.log('/api/login', 'host');
+  // console.log('/api/login', 'host');
   axios
     .post(host, data)
     .then(response => {
