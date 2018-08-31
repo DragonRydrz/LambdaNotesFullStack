@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha *.tests.js",
-    "start": "nodemon server/server.js",
+    "start": "node server/server.js",
     "heroku-postbuild": "cd client && yarn && yarn --production=false && yarn run build"
   },
   "keywords": [],
